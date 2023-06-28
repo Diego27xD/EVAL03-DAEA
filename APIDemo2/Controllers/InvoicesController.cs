@@ -113,7 +113,7 @@ namespace APIDemo2.Controllers
                 return NotFound();
             }
 
-            invoice.estado = false;
+            invoice.Estado = false;
             _context.Entry(invoice).State = EntityState.Modified;
             await _context.SaveChangesAsync();
 

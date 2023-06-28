@@ -1,0 +1,31 @@
+{
+    "Routes": [
+      {
+        "DownstreamPathTemplate": "/WebB/api/Values",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 80
+          }
+        ],
+        "UpstreamPathTemplate": "/gateway/Students",
+        "UpstreamHttpMethod": [ "Get" ]
+      },
+      {
+        "DownstreamPathTemplate": "/WebA/api/Products",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 80
+          }
+        ],
+        "UpstreamPathTemplate": "/gateway/Products",
+        "UpstreamHttpMethod": [ "Get" ]
+      }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl":  "https://localhost:5000"
+    }
+}
